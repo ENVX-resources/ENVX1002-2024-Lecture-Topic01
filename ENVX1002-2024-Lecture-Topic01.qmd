@@ -9,6 +9,7 @@ execute:
   eval: true
   echo: true
 self-contained: false # set to true once draft is complete
+# post-render: _postrender.R # render PDF; comment out before pushing to GitHub
 ---
 
 
@@ -670,9 +671,6 @@ What happens when we get it wrong: [Personalised medicine to tailor chemotherapy
 
 This presentation is based on the [SOLES Quarto reveal.js template](https://github.com/usyd-soles-edu/soles-revealjs) and is licensed under a [Creative Commons Attribution 4.0 International License][cc-by].
 
-```{r, echo=FALSE}
-renderthis::to_pdf("ENVX1002-2024-Lecture-Topic01.html")
-```
 
 <!-- Links -->
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
