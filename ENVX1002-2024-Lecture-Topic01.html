@@ -8,7 +8,7 @@
 <link href="ENVX1002-2024-Lecture-Topic01_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="ENVX1002-2024-Lecture-Topic01_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="ENVX1002-2024-Lecture-Topic01_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.549">
+  <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Dr.&nbsp;Floris van Ogtrop">
   <title>Topic 1 – Introduction</title>
@@ -31,7 +31,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -238,8 +238,7 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    padding-bottom: 0.5rem;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -814,20 +813,20 @@ Dr.&nbsp;Floris van Ogtrop
 <section id="gapminder-demo-in-r" class="title-slide slide level1 center">
 <h1>Gapminder demo in R</h1>
 <div class="cell">
-<details class="code-fold">
+<details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">library</span>(gapminder)</span>
-<span id="cb1-2"><a href=""></a><span class="fu">library</span>(gganimate)</span>
-<span id="cb1-3"><a href=""></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-4"><a href=""></a><span class="fu">ggplot</span>(gapminder, <span class="fu">aes</span>(gdpPercap, lifeExp, <span class="at">size =</span> pop, <span class="at">colour =</span> country)) <span class="sc">+</span></span>
-<span id="cb1-5"><a href=""></a>    <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb1-6"><a href=""></a>    <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> country_colors) <span class="sc">+</span></span>
-<span id="cb1-7"><a href=""></a>    <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">12</span>)) <span class="sc">+</span></span>
-<span id="cb1-8"><a href=""></a>    <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
-<span id="cb1-9"><a href=""></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span>continent) <span class="sc">+</span></span>
-<span id="cb1-10"><a href=""></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Year: {frame_time}"</span>, <span class="at">x =</span> <span class="st">"GDP per capita"</span>, <span class="at">y =</span> <span class="st">"life expectancy"</span>) <span class="sc">+</span></span>
-<span id="cb1-11"><a href=""></a>    <span class="fu">transition_time</span>(year) <span class="sc">+</span></span>
-<span id="cb1-12"><a href=""></a>    <span class="fu">ease_aes</span>(<span class="st">"linear"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(gapminder)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(gganimate)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">ggplot</span>(gapminder, <span class="fu">aes</span>(gdpPercap, lifeExp, <span class="at">size =</span> pop, <span class="at">colour =</span> country)) <span class="sc">+</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>    <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> country_colors) <span class="sc">+</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>    <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">12</span>)) <span class="sc">+</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>    <span class="fu">scale_x_log10</span>() <span class="sc">+</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span>continent) <span class="sc">+</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Year: {frame_time}"</span>, <span class="at">x =</span> <span class="st">"GDP per capita"</span>, <span class="at">y =</span> <span class="st">"life expectancy"</span>) <span class="sc">+</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a>    <span class="fu">transition_time</span>(year) <span class="sc">+</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a>    <span class="fu">ease_aes</span>(<span class="st">"linear"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <!-- Image takes a while to generate, so set `eval: false` in the code chunk header and load an image instead. -->
@@ -1012,11 +1011,9 @@ Dr.&nbsp;Floris van Ogtrop
 <h1>Thanks!</h1>
 <p>This presentation is based on the <a href="https://github.com/usyd-soles-edu/soles-revealjs">SOLES Quarto reveal.js template</a> and is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
 <!-- Links -->
-<div class="quarto-auto-generated-content">
-<p><img src="images/usyd_horizontal.svg" class="slide-logo"></p>
-<div class="footer footer-default">
 
-</div>
+<img src="images/usyd_horizontal.svg" class="slide-logo r-stretch"><div class="footer footer-default">
+
 </div>
 </section>
     </div>
@@ -1045,6 +1042,7 @@ Dr.&nbsp;Floris van Ogtrop
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
+'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1326,9 +1324,10 @@ Dr.&nbsp;Floris van Ogtrop
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      function tippyHover(el, contentFn) {
         const config = {
           allowHTML: true,
+          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1338,17 +1337,8 @@ Dr.&nbsp;Floris van Ogtrop
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start',
+          placement: 'bottom-start'
         };
-        if (contentFn) {
-          config.content = contentFn;
-        }
-        if (onTriggerFn) {
-          config.onTrigger = onTriggerFn;
-        }
-        if (onUntriggerFn) {
-          config.onUntrigger = onUntriggerFn;
-        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
