@@ -15,9 +15,7 @@ self-contained: false # set to true once draft is complete
 
 # Acknowledgement of Country
 
-> I would like to acknowledge the Traditional Owners of Australia and recognise their continuing connection to land, water and culture. I am currently lecturing on the land of the Wangal people of the Eora Nation and pay my respects to their Elders, past, present and emerging. 
-
-> I further acknowledge the Traditional Owners of the country on which you are on and pay respects to their Elders, past, present and future.
+> I would like to acknowledge the Traditional Owners of Australia and recognise their continuing connection to land, water and culture. I am currently lecturing on the land of the Gadigal people of the Eora Nation and pay my respects to their Elders, past, present and emerging. 
 
 
 # Emergency procedures
@@ -249,8 +247,8 @@ Incidents are flagged to the University and reviewed for breaches of academic in
 **Teaching staff**
 
 - A/Prof. Floris van Ogtrop - Module 1 (Weeks 1 - 4, 13)
-- Dr. Aaron Greenville - Module 2 (Weeks 5 - 8) aaron.greenville@sydney.edu.au
-- Dr. Liana Pozza - Module 3 (Weeks 9 - 12) liana.pozza@sydney.edu.au
+- Dr. Januar Harianto - Module 2 (Weeks 5 - 8) januar.harianto@sydney.edu.au
+- Dr. Liana Pozza - **Deputy Coordinator** - Module 3 (Weeks 9 - 12) liana.pozza@sydney.edu.au
 - Tutors & Demonstrators:  mainly Honours/Masters/PhD students or PhD graduates 
 
 
