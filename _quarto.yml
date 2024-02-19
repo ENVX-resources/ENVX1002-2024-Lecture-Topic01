@@ -19,5 +19,8 @@ format:
     logo: images/usyd_horizontal.svg
     transition: none # none | fade | slide | convex | concave | zoom
     background-transition: none
+    embed-resources: true
 execute:
   freeze: auto
+
+
