@@ -348,7 +348,7 @@ Incidents are flagged to the University and reviewed for breaches of academic in
 - Practical attendance is **very important** for group work as well as learning.
 - There is a **"statistically significant"** correlation between class attendance and performance in this unit.
 
-![Attendance](images/attendance.png)
+![Attendance](images/Attendance.png)
 
 
 
